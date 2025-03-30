@@ -4,7 +4,7 @@ Este proyecto tiene como objetivo predecir la calidad de los vinos (tinto y blan
 
 ## Dataset
 
-El dataset utilizado es el **Wine Quality Dataset**. Contiene información sobre características físico-químicas de los vinos y la calidad evaluada por expertos. Este dataset está disponible públicamente en el [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/wine+quality) y en [Kaggle](https://www.kaggle.com/uciml/red-wine-quality-csv).
+El dataset utilizado es el **Wine Quality Dataset**. Contiene información sobre características físico-químicas de los vinos y la calidad evaluada por expertos. Este dataset está disponible públicamente en el [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/wine+quality).
 
 ### Descripción del dataset:
 - El dataset incluye dos versiones: vino tinto y vino blanco.
