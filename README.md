@@ -22,9 +22,7 @@ ML_WineQuality/
 ├── data/                  # Directorio para almacenar el dataset (archivos CSV).
 ├── notebooks/             # Jupyter notebooks para el análisis y modelado.
 ├── src/                   # Código fuente para preprocesamiento, modelos, etc.
-├── README.md              # Este archivo con la descripción del proyecto.
-
-# ML_WineQuality - Wine Quality Prediction
+├── README.md              # Este archivo con la descripción del proyecto.# ML_WineQuality - Wine Quality Prediction
 
 ## Project Overview
 
