@@ -1,53 +1,67 @@
-# ML_WineQuality
+# Proyecto: **Predicción de la Calidad del Vino con Machine Learning**
 
-Este proyecto tiene como objetivo predecir la calidad de los vinos (tinto y blanco) a partir de características físico-químicas. Para ello, utilizamos técnicas de Machine Learning para abordar el problema como **regresión** o **clasificación**, dependiendo de cómo definamos las clases de calidad del vino.
+## Descripción del Proyecto
+Este proyecto tiene como objetivo predecir la calidad de los vinos (tintos y blancos) utilizando modelos de Machine Learning. El dataset utilizado contiene características químicas de los vinos, como acidez, azúcar residual, pH y alcohol, entre otros, y la tarea es predecir la calidad del vino (en una escala de 0 a 10) a partir de esas características.
 
 ## Dataset
-
-El dataset utilizado es el **Wine Quality Dataset**. Contiene información sobre características físico-químicas de los vinos y la calidad evaluada por expertos. Este dataset está disponible públicamente en el [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/wine+quality).
-
-### Descripción del dataset:
-- El dataset incluye dos versiones: vino tinto y vino blanco.
-- Las características incluyen datos como la acidez, el pH, el alcohol, el azúcar residual, entre otros.
-- La calidad del vino es una variable numérica entre 0 y 10.
+Se ha utilizado el conjunto de datos **Wine Quality Dataset**, disponible públicamente en [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/wine+quality). El dataset consta de dos partes: vinos tintos y vinos blancos, con 11 características y una etiqueta de calidad.
 
 ## Solución Adoptada
+El proyecto empleó modelos de Machine Learning supervisado para la predicción de la calidad del vino. Se probaron varios algoritmos de clasificación, entre los que destacan:
+- **Árboles de decisión** (XGBoost)
+- **Máquinas de soporte vectorial** (SVM)
+- **Perceptrón multicapa** (MLP)
 
-Se abordará el problema utilizando un enfoque de **Machine Learning supervisado**. Se probarán varios modelos de regresión y clasificación para predecir la calidad del vino y se evaluarán según su precisión y rendimiento.
+Los pasos realizados en el proyecto fueron:
+1. **Preprocesamiento de los datos**: Se realizó la limpieza de datos y normalización de las características.
+2. **Entrenamiento de modelos**: Se entrenaron modelos de clasificación usando los conjuntos de entrenamiento.
+3. **Evaluación de los modelos**: Se evaluaron los modelos con métricas como la precisión y el recall.
+4. **Guardado del modelo entrenado**: El modelo final fue guardado en formato `.pkl` para su reutilización.
 
 ## Estructura de Directorios
 
-```plaintext
-ML_WineQuality/
-├── data/                  # Directorio para almacenar el dataset (archivos CSV).
-├── notebooks/             # Jupyter notebooks para el análisis y modelado.
-├── src/                   # Código fuente para preprocesamiento, modelos, etc.
-├── README.md              # Este archivo con la descripción del proyecto.# ML_WineQuality - Wine Quality Prediction
+## Notebooks
+El proyecto incluye varios notebooks:
+- **EDA_notebook.ipynb**: Análisis exploratorio de los datos.
+- **Model_training_notebook.ipynb**: Entrenamiento de un modelo básico.
+- **Model_training2xgb.ipynb**: Entrenamiento de un modelo usando XGBoost.
+- **Model_training3.SVM.ipynb**: Entrenamiento de un modelo usando SVM.
+- **Model_training4.MLP.ipynb**: Entrenamiento de un modelo usando un perceptrón multicapa.
+- **Preprocessing_notebook.ipynb**: Preprocesamiento de los datos (limpieza y normalización).
 
-## Project Overview
+## Modelos
+- El modelo entrenado final está guardado en formato **.pkl** dentro de la carpeta `src/models`.
 
-This project aims to predict the quality of wine based on various chemical properties like acidity, alcohol content, etc. The dataset used for this project is the **Wine Quality** dataset, which consists of both red and white wine data.
+# Project: **Wine Quality Prediction with Machine Learning**
+
+## Project Description
+The goal of this project is to predict the quality of wines (red and white) using Machine Learning models. The dataset contains chemical characteristics of wines, such as acidity, residual sugar, pH, and alcohol, among others. The task is to predict the wine quality (on a scale from 0 to 10) from these features.
 
 ## Dataset
+The **Wine Quality Dataset** was used, which is publicly available at the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/wine+quality). The dataset consists of two parts: red wines and white wines, with 11 features and a quality label.
 
-The dataset contains 12 features (e.g., alcohol, acidity, residual sugar) and a quality rating between 0 and 10. The datasets can be accessed from [UCI Wine Quality Dataset](https://archive.ics.uci.edu/ml/datasets/Wine+Quality).
+## Adopted Solution
+The project used supervised Machine Learning models for wine quality prediction. Several classification algorithms were tested, including:
+- **Decision Trees** (XGBoost)
+- **Support Vector Machines** (SVM)
+- **Multilayer Perceptron** (MLP)
 
-## Solution
+The steps taken in the project were:
+1. **Data Preprocessing**: Data cleaning and feature normalization.
+2. **Model Training**: Classification models were trained using training sets.
+3. **Model Evaluation**: Models were evaluated with metrics such as accuracy and recall.
+4. **Model Saving**: The final trained model was saved in `.pkl` format for reuse.
 
-We are building a **Random Forest Regressor** model to predict wine quality for both red and white wines.
+## Directory Structure
 
-## Project Structure
+## Notebooks
+The project includes several notebooks:
+- **EDA_notebook.ipynb**: Exploratory Data Analysis.
+- **Model_training_notebook.ipynb**: Basic model training.
+- **Model_training2xgb.ipynb**: Training a model using XGBoost.
+- **Model_training3.SVM.ipynb**: Training a model using SVM.
+- **Model_training4.MLP.ipynb**: Training a model using a multilayer perceptron.
+- **Preprocessing_notebook.ipynb**: Data preprocessing (cleaning and normalization).
 
-- `/src/data_sample`: Contains a small sample of the wine dataset (to ensure reproducibility).
-- `/src/notebooks`: Contains exploratory data analysis (EDA) and preprocessing steps.
-- `/src/results_notebook`: Contains the final notebook with the step-by-step process.
-- `/src/models`: Contains the saved trained models (`model_white_wine.pkl`, `model_red_wine.pkl`).
-- `/src/utils`: Contains utility functions or custom classes (if any).
-
-## Steps Followed
-
-1. **Exploratory Data Analysis (EDA)** - Analyzing the dataset's characteristics and distributions.
-2. **Data Preprocessing** - Splitting the data into train-test sets and normalizing the features.
-3. **Model Training** - Using a Random Forest Regressor to train models for both red and white wine.
-4. **Model Evaluation** - Evaluating the models using MSE and R² scores.
-5. **Model Saving** - Saving the trained models using joblib.
+## Models
+- The final trained model is saved in **.pkl** format in the `src/models` folder.
