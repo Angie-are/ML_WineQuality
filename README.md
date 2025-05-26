@@ -1,67 +1,71 @@
-# Proyecto: **Predicción de la Calidad del Vino con Machine Learning**
+Predicción de Calidad de Vinos con Machine Learning / Wine Quality Prediction with Machine Learning
+Descripción del proyecto / Project Description
+Este proyecto utiliza técnicas de Machine Learning para predecir la calidad de vinos basada en variables físico-químicas. El objetivo es facilitar un método rápido y económico para estimar la calidad, evitando los métodos tradicionales costosos y lentos.
+This project uses Machine Learning techniques to predict wine quality based on physicochemical variables. The goal is to provide a fast and cost-effective method to estimate quality, avoiding traditional expensive and slow methods.
 
-## Descripción del Proyecto
-Este proyecto tiene como objetivo predecir la calidad de los vinos (tintos y blancos) utilizando modelos de Machine Learning. El dataset utilizado contiene características químicas de los vinos, como acidez, azúcar residual, pH y alcohol, entre otros, y la tarea es predecir la calidad del vino (en una escala de 0 a 10) a partir de esas características.
+Problema de negocio / Business Problem
+La calidad del vino es clave para la satisfacción del cliente y la reputación de la bodega. Medir la calidad en laboratorio es costoso y requiere tiempo. Un modelo predictivo automático puede ayudar a predecir la calidad a partir de características químicas, agilizando el control de calidad.
+Wine quality is crucial for customer satisfaction and winery reputation. Measuring quality in the lab is costly and time-consuming. An automatic predictive model can help forecast quality based on chemical features, speeding up quality control.
 
-## Dataset
-Se ha utilizado el conjunto de datos **Wine Quality Dataset**, disponible públicamente en [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/wine+quality). El dataset consta de dos partes: vinos tintos y vinos blancos, con 11 características y una etiqueta de calidad.
+Problema técnico / Technical Problem
+El problema se aborda como una clasificación multiclase, donde la variable objetivo es la calidad del vino, que varía entre 3 y 9. Se emplean modelos supervisados para clasificar cada muestra en la categoría correspondiente.
+The problem is tackled as a multiclass classification, where the target variable is wine quality, ranging from 3 to 9. Supervised models are used to classify each sample into the corresponding category.
 
-## Solución Adoptada
-El proyecto empleó modelos de Machine Learning supervisado para la predicción de la calidad del vino. Se probaron varios algoritmos de clasificación, entre los que destacan:
-- **Árboles de decisión** (XGBoost)
-- **Máquinas de soporte vectorial** (SVM)
-- **Perceptrón multicapa** (MLP)
+Dataset
+Nombre: Wine Quality / Name: Wine Quality
 
-Los pasos realizados en el proyecto fueron:
-1. **Preprocesamiento de los datos**: Se realizó la limpieza de datos y normalización de las características.
-2. **Entrenamiento de modelos**: Se entrenaron modelos de clasificación usando los conjuntos de entrenamiento.
-3. **Evaluación de los modelos**: Se evaluaron los modelos con métricas como la precisión y el recall.
-4. **Guardado del modelo entrenado**: El modelo final fue guardado en formato `.pkl` para su reutilización.
+Origen: UCI Machine Learning Repository
 
-## Estructura de Directorios
+Tamaño: 1599 muestras (vinos tintos) / Size: 1599 samples (red wines)
 
-## Notebooks
-El proyecto incluye varios notebooks:
-- **EDA_notebook.ipynb**: Análisis exploratorio de los datos.
-- **Model_training_notebook.ipynb**: Entrenamiento de un modelo básico.
-- **Model_training2xgb.ipynb**: Entrenamiento de un modelo usando XGBoost.
-- **Model_training3.SVM.ipynb**: Entrenamiento de un modelo usando SVM.
-- **Model_training4.MLP.ipynb**: Entrenamiento de un modelo usando un perceptrón multicapa.
-- **Preprocessing_notebook.ipynb**: Preprocesamiento de los datos (limpieza y normalización).
+Variables: 11 predictoras (propiedades físico-químicas) + 1 objetivo (calidad) / Variables: 11 predictors (physicochemical properties) + 1 target (quality)
 
-## Modelos
-- El modelo entrenado final está guardado en formato **.pkl** dentro de la carpeta `src/models`.
+Metodología / Methodology
+Exploración de datos (EDA): análisis univariante, bivariante y multivariante para entender la distribución y relación de variables.
+Exploratory Data Analysis (EDA): univariate, bivariate, and multivariate analysis to understand variable distributions and relationships.
 
-# Project: **Wine Quality Prediction with Machine Learning**
+Modelado:
 
-## Project Description
-The goal of this project is to predict the quality of wines (red and white) using Machine Learning models. The dataset contains chemical characteristics of wines, such as acidity, residual sugar, pH, and alcohol, among others. The task is to predict the wine quality (on a scale from 0 to 10) from these features.
+Baseline con modelo simple (ej. Regresión Logística).
 
-## Dataset
-The **Wine Quality Dataset** was used, which is publicly available at the [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/wine+quality). The dataset consists of two parts: red wines and white wines, with 11 features and a quality label.
+Comparación de varios modelos: Random Forest, SVM, XGBoost.
+Modeling:
 
-## Adopted Solution
-The project used supervised Machine Learning models for wine quality prediction. Several classification algorithms were tested, including:
-- **Decision Trees** (XGBoost)
-- **Support Vector Machines** (SVM)
-- **Multilayer Perceptron** (MLP)
+Baseline with simple model (e.g., Logistic Regression).
 
-The steps taken in the project were:
-1. **Data Preprocessing**: Data cleaning and feature normalization.
-2. **Model Training**: Classification models were trained using training sets.
-3. **Model Evaluation**: Models were evaluated with metrics such as accuracy and recall.
-4. **Model Saving**: The final trained model was saved in `.pkl` format for reuse.
+Comparison of several models: Random Forest, SVM, XGBoost.
 
-## Directory Structure
+Validación cruzada: para obtener métricas robustas (accuracy, F1-score macro).
+Cross-validation: to obtain robust metrics (accuracy, macro F1-score).
 
-## Notebooks
-The project includes several notebooks:
-- **EDA_notebook.ipynb**: Exploratory Data Analysis.
-- **Model_training_notebook.ipynb**: Basic model training.
-- **Model_training2xgb.ipynb**: Training a model using XGBoost.
-- **Model_training3.SVM.ipynb**: Training a model using SVM.
-- **Model_training4.MLP.ipynb**: Training a model using a multilayer perceptron.
-- **Preprocessing_notebook.ipynb**: Data preprocessing (cleaning and normalization).
+Optimización de hiperparámetros: búsqueda con GridSearch o RandomSearch.
+Hyperparameter optimization: using GridSearch or RandomSearch.
 
-## Models
-- The final trained model is saved in **.pkl** format in the `src/models` folder.
+Evaluación final: sobre conjunto de test independiente y análisis de errores.
+Final evaluation: on independent test set and error analysis.
+
+Resultados / Results
+Mejor modelo: Random Forest optimizado.
+
+Métrica principal: F1-score macro ~0.60.
+
+Predicciones correctas principalmente en clases medias; errores comunes entre clases adyacentes.
+
+Best model: Optimized Random Forest.
+
+Main metric: Macro F1-score ~0.60.
+
+Correct predictions mainly in middle classes; common errors between adjacent classes.
+
+Uso del proyecto / How to use the project
+Clonar repositorio / Clone the repository
+
+Instalar dependencias (recomendado usar requirements.txt) / Install dependencies (recommended to use requirements.txt)
+
+Ejecutar notebooks en orden:
+
+EDA_notebook.ipynb
+
+ML_WineQuality.ipynb
+
+Consultar presentación para explicación y conclusiones / Check the presentation for explanation and conclusions
