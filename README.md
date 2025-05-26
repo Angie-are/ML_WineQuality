@@ -77,16 +77,6 @@ Supervised models are used to classify each sample into the corresponding catego
 
 ---
 
-## Uso del proyecto / How to use the project
-
-1. Clonar repositorio / Clone the repository  
-2. Instalar dependencias (recomendado usar `requirements.txt`) / Install dependencies (recommended to use `requirements.txt`)  
-3. Ejecutar notebooks en orden:  
-   - `EDA_notebook.ipynb`  
-   - `ML_WineQuality.ipynb`  
-4. Consultar presentación para explicación y conclusiones / Check the presentation for explanation and conclusions
-
----
 
 ## Estructura de carpetas / Folder structure
 ├── data/ # Datos originales / Original data
@@ -96,16 +86,5 @@ Supervised models are used to classify each sample into the corresponding catego
 ├── README.md # Este archivo / This file
 ├── requirements.txt # Dependencias / Dependencies
 └── presentation/ # Soporte de presentación (PPTX y PDF) / Presentation files (PPTX and PDF) / MP4.
-
-## Recomendaciones / Recommendations
-
-- Centrarse en el problema de clasificación multiclase, evitar mezclar enfoques de regresión.  
-- Interpretar las métricas en función del negocio (por ejemplo, el coste de clasificar mal una calidad alta).  
-- Considerar ampliar datos o variables para mejorar el modelo.  
-
-- Focus on the multiclass classification problem, avoid mixing regression approaches.  
-- Interpret metrics based on business impact (e.g., cost of misclassifying high-quality wines).  
-- Consider expanding data or variables to improve the model.
-
 
 
