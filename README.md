@@ -89,5 +89,23 @@ Supervised models are used to classify each sample into the corresponding catego
 ---
 
 ## Estructura de carpetas / Folder structure
+├── data/ # Datos originales / Original data
+├── src/ # Código fuente y notebooks / Source code and notebooks
+│ ├── results_notebook/ # Notebooks con EDA y modelado / Notebooks with EDA and modeling
+│ └── ...
+├── README.md # Este archivo / This file
+├── requirements.txt # Dependencias / Dependencies
+└── presentation/ # Soporte de presentación (PPTX y PDF) / Presentation files (PPTX and PDF) / MP4.
+
+## Recomendaciones / Recommendations
+
+- Centrarse en el problema de clasificación multiclase, evitar mezclar enfoques de regresión.  
+- Interpretar las métricas en función del negocio (por ejemplo, el coste de clasificar mal una calidad alta).  
+- Considerar ampliar datos o variables para mejorar el modelo.  
+
+- Focus on the multiclass classification problem, avoid mixing regression approaches.  
+- Interpret metrics based on business impact (e.g., cost of misclassifying high-quality wines).  
+- Consider expanding data or variables to improve the model.
+
 
 
